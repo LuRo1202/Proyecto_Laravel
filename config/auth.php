@@ -62,7 +62,9 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            // ¡Esta es la línea corregida!
+            // Ahora Laravel sabe que debe usar tu modelo "Usuario"
+            'model' => App\Models\Usuario::class,
         ],
 
         // 'users' => [
